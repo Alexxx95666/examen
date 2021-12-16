@@ -103,7 +103,7 @@
                             android:layout_height="match_parent">
 
                             <Button
-                                android:id="@+id/button"
+                                android:id="@+id/bt1"
                                 android:layout_width="196dp"
                                 android:layout_height="53dp"
                                 android:layout_marginTop="4dp"
@@ -117,7 +117,7 @@
                                 app:layout_constraintTop_toTopOf="parent" />
 
                             <Button
-                                android:id="@+id/button2"
+                                android:id="@+id/bt2"
                                 android:layout_width="199dp"
                                 android:layout_height="49dp"
                                 android:layout_marginTop="8dp"
@@ -127,7 +127,7 @@
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHorizontal_bias="0.556"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/button"
+                                app:layout_constraintTop_toBottomOf="@+id/bt1"
                                 app:layout_constraintVertical_bias="0.0"
                                 app:cornerRadius="25dp"/>
 
@@ -141,7 +141,7 @@
                                 android:textSize="12sp"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintStart_toStartOf="parent"
-                                app:layout_constraintTop_toBottomOf="@+id/button2" />
+                                app:layout_constraintTop_toBottomOf="@+id/bt2" />
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </LinearLayout>
 

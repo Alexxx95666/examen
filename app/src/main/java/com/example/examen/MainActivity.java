@@ -2,6 +2,7 @@ package com.example.examen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -32,21 +33,28 @@ public class MainActivity extends AppCompatActivity {
         String userObj= adm.getUser().toString().trim();
         String passObj= adm.getPass().toString().trim();
 
-        switch (){
+        msj.setVisibility(View.INVISIBLE);
+
+
+        switch (usuario){
             case "Sofia":
                 if(usuario.equals(userObj) && contrasena.equals(passObj)){
                     //inicio sesion
+                    Intent i = new Intent(getBaseContext(), Home_act.class);
+                    startActivity(i);
                 }
                 break;
             case "":
                 if(usuario.equals("") && contrasena.equals("")){
                     //campos vacios
+                    msj.setVisibility(View.VISIBLE);
                     msj.setText("Campos vacíos, por favor intente nuevamente");
                 }
                 break;
             default:
                 if(!usuario.equals(userObj) && !contrasena.equals(passObj)){
                     //incorrectos
+                    msj.setVisibility(View.VISIBLE);
                     msj.setText("Campos incorrectos. Por favor intente nuevamente");
                 }
                 break;

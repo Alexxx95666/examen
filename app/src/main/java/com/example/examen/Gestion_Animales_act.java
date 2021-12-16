@@ -78,12 +78,12 @@ public class Gestion_Animales_act extends AppCompatActivity {
         DbHelper admin = new DbHelper(this, "veticalcare",null,1);
         SQLiteDatabase db = admin.getWritableDatabase();
 
-        String codigo = Codigo.getText().toString();
+        String cod = Codigo.getText().toString();
 
-        if(!codigo.isEmpty())
+        if(!cod.isEmpty())
         {
             Cursor file = db.rawQuery
-                    ("SELECT nombre,tipo, edad, enfermedad FROM Ficha WHERE codigo="+codigo,null);
+                    ("SELECT nombre,tipo, edad, enfermedad FROM Ficha WHERE codigo="+cod,null);
             if(file.moveToFirst())
             {
                 Nombre.setText(file.getString(0));
@@ -105,7 +105,7 @@ public class Gestion_Animales_act extends AppCompatActivity {
 
     public void Eliminar (View v)
     {
-        DbHelper admin = new DbHelper(this, "biofit",null,1);
+        DbHelper admin = new DbHelper(this, "veticalcare",null,1);
         SQLiteDatabase db = admin.getWritableDatabase();
 
         String codigo = Codigo.getText().toString();

@@ -54,8 +54,10 @@
                 android:layout_width="395dp"
                 android:layout_height="332dp"
                 android:orientation="vertical"
-                tools:layout_editor_absoluteX="1dp"
-                tools:layout_editor_absoluteY="1dp">
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -94,9 +96,15 @@
                     <LinearLayout
                         android:layout_width="393dp"
                         android:layout_height="162dp"
+                        android:layout_marginStart="1dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="1dp"
+                        android:layout_marginBottom="1dp"
                         android:orientation="vertical"
-                        tools:layout_editor_absoluteX="1dp"
-                        tools:layout_editor_absoluteY="169dp">
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/pass">
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -106,7 +114,6 @@
                                 android:id="@+id/bt1"
                                 android:layout_width="196dp"
                                 android:layout_height="53dp"
-                                android:layout_marginTop="4dp"
                                 android:backgroundTint="#2741A1"
                                 android:onClick="LoadSession"
                                 android:text="INICIAR SESION"
@@ -122,24 +129,26 @@
                                 android:layout_height="49dp"
                                 android:layout_marginTop="8dp"
                                 android:backgroundTint="#BD3939"
+                                android:onClick="cerrar"
                                 android:text="SALIR VETICAL"
+                                app:cornerRadius="25dp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
                                 app:layout_constraintHorizontal_bias="0.556"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/bt1"
-                                app:layout_constraintVertical_bias="0.0"
-                                app:cornerRadius="25dp"/>
+                                app:layout_constraintVertical_bias="0.25" />
 
                             <TextView
                                 android:id="@+id/msj"
                                 android:layout_width="351dp"
                                 android:layout_height="18dp"
-                                android:layout_marginTop="13dp"
+                                android:layout_marginTop="8dp"
                                 android:text="TextView"
                                 android:textColor="#B51919"
                                 android:textSize="12sp"
                                 app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.38"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toBottomOf="@+id/bt2" />
                         </androidx.constraintlayout.widget.ConstraintLayout>

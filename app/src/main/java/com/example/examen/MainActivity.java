@@ -24,41 +24,54 @@ public class MainActivity extends AppCompatActivity {
         user = findViewById(R.id.user);
         pass = findViewById(R.id.pass);
         msj = findViewById(R.id.msj);
+        msj.setVisibility(View.INVISIBLE);
     }
 
-    public void LoadSession(View view){
-        String usuario = user.getText().toString().trim();
-        String contrasena = pass.getText().toString().trim();
+    public void LoadSession(View view)
+    {
+        String usuario = user.getText().toString();
+        String contrasena = pass.getText().toString();
 
-        String userObj= adm.getUser().toString().trim();
-        String passObj= adm.getPass().toString().trim();
+        String userObj = adm.getUser().toString().trim();
+        String passObj = adm.getPass().toString().trim();
 
-        msj.setVisibility(View.INVISIBLE);
-
-
-        switch (usuario){
+        switch (usuario)
+        {
             case "Sofia":
-                if(usuario.equals(userObj) && contrasena.equals(passObj)){
-                    //inicio sesion
-                    Intent i = new Intent(getBaseContext(), Home_act.class);
+                if (usuario.equals(userObj) && contrasena.equals(passObj))
+                {
+                    user.setText("");
+                    pass.setText("");
+
+                    //INICIO SESION
+                    Intent i = new Intent(this, Home_act.class);
+
+
                     startActivity(i);
                 }
                 break;
             case "":
-                if(usuario.equals("") && contrasena.equals("")){
-                    //campos vacios
+                if (usuario.equals("") && contrasena.equals(""))
+                {
                     msj.setVisibility(View.VISIBLE);
-                    msj.setText("Campos vacíos, por favor intente nuevamente");
+                    msj.setText("Campos vacios, por favor intenta nuevamente");
                 }
                 break;
             default:
-                if(!usuario.equals(userObj) && !contrasena.equals(passObj)){
-                    //incorrectos
+                if (!usuario.equals(userObj) && !contrasena.equals(passObj))
+                {
                     msj.setVisibility(View.VISIBLE);
-                    msj.setText("Campos incorrectos. Por favor intente nuevamente");
+                    msj.setText("Campos incorrectos por favor intentar nuevamente");
+
                 }
                 break;
         }
+
+    }
+
+    public void cerrar (View view)
+    {
+        System.exit(0);
     }
 
 }

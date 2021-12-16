@@ -14,7 +14,7 @@ public class DbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("CREATE TABLE Clase (codigo int primary key,nombre text,tipo text, edad text, enfermedad text)");
+        sqLiteDatabase.execSQL("CREATE TABLE Ficha (codigo int primary key,nombre text,tipo text, edad text, enfermedad text)");
 
     }
 
@@ -24,3 +24,4 @@ public class DbHelper extends SQLiteOpenHelper {
     }
 
 }
+

@@ -11,9 +11,9 @@
         android:layout_width="367dp"
         android:layout_height="658dp"
         android:layout_marginStart="22dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="64dp"
         android:layout_marginEnd="23dp"
-        android:layout_marginBottom="52dp"
+        android:layout_marginBottom="16dp"
         android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,13 +39,13 @@
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="136dp"
-                    android:layout_height="156dp"
-                    android:layout_marginStart="3dp"
-                    android:layout_marginTop="2dp"
+                    android:layout_width="102dp"
+                    android:layout_height="139dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="24dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/Imagen2" />
+                    app:srcCompat="@drawable/img2" />
 
                 <TextView
                     android:id="@+id/textView"
@@ -74,13 +74,13 @@
                     android:layout_width="148dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="18dp"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
                     android:ems="10"
                     android:hint="N° de Ficha"
                     android:inputType="textPersonName"
                     android:textSize="14sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
 
                 <EditText
                     android:id="@+id/tvnombre"
@@ -94,6 +94,7 @@
                     android:textSize="14sp"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>

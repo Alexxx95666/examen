@@ -5,10 +5,10 @@
       <map>
         <entry key="..\:/Users/marth/AndroidStudioProjects/examen/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.23148148148148148" />
         <entry key="..\:/Users/marth/AndroidStudioProjects/examen/app/src/main/res/drawable/gradient_background.xml" value="0.2388888888888889" />
-        <entry key="..\:/Users/marth/AndroidStudioProjects/examen/app/src/main/res/layout/activity_gestion_animales.xml" value="0.3625" />
-        <entry key="..\:/Users/marth/AndroidStudioProjects/examen/app/src/main/res/layout/activity_home.xml" value="0.33" />
-        <entry key="..\:/Users/marth/AndroidStudioProjects/examen/app/src/main/res/layout/activity_ingresos.xml" value="0.3625" />
-        <entry key="..\:/Users/marth/AndroidStudioProjects/examen/app/src/main/res/layout/activity_main.xml" value="0.28618421052631576" />
+        <entry key="..\:/Users/marth/AndroidStudioProjects/examen/app/src/main/res/layout/activity_gestion_animales.xml" value="0.33" />
+        <entry key="..\:/Users/marth/AndroidStudioProjects/examen/app/src/main/res/layout/activity_home.xml" value="0.5" />
+        <entry key="..\:/Users/marth/AndroidStudioProjects/examen/app/src/main/res/layout/activity_ingresos.xml" value="0.16716417910447762" />
+        <entry key="..\:/Users/marth/AndroidStudioProjects/examen/app/src/main/res/layout/activity_main.xml" value="0.18791946308724833" />
       </map>
     </option>
   </component>

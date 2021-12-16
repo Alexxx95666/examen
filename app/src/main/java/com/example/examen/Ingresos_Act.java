@@ -2,6 +2,7 @@ package com.example.examen;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -30,33 +31,36 @@ public class Ingresos_Act extends AppCompatActivity {
         Enfermedad.setAdapter(adapterEnfermedad);
     }
 
-    public void Calcular (){
+    public void Calcular(View view) {
         Ingresos ingre = new Ingresos();
-        int [] TipoPrecio = ingre.getTipoPrecio();
-        int [] EnfermedadPrecio = ingre.getEnfermedadPrecio();
-
+        int[] TipoPrecio = ingre.getTipoPrecio();
+        int[] EnfermedadPrecio = ingre.getEnfermedadPrecio();
+        String[] Tipolista = ingre.getTipo();
+        String[] Enfermedadlista = ingre.getEnfermedad();
         String tipo = Tipo.getSelectedItem().toString();
         String enfermedad = Enfermedad.getSelectedItem().toString();
 
-        if(Tipo.equals("Domestico") && Enfermedad.equals ("Brucelosis") ) {
-            Resultado.setVisibility(View.VISIBLE);
-            Resultado.setText("La cotizacion final es: " + ingre.Resultado(TipoPrecio[0], EnfermedadPrecio[0]));
+        int T = 0;
+        int E = 0;
+
+        for (int i = 0; 1 < Tipolista.length; i++) {
+            if (Tipolista[i] == tipo) {
+                T = i;
+                break;
+            }
         }
-        if(Tipo.equals("Domestico") && Enfermedad.equals ("Fiebre Aftosa") ) {
-            Resultado.setVisibility(View.VISIBLE);
-            Resultado.setText("La cotizacion final es: " + ingre.Resultado(TipoPrecio[0], EnfermedadPrecio[0]));
+
+        for (int i = 0; 1 < Enfermedadlista.length; i++) {
+            if (Enfermedadlista[i] == enfermedad) {
+                E = i;
+                break;
+            }
         }
-        if(Tipo.equals("Domestico") && Enfermedad.equals ("Salmonella") ) {
-            Resultado.setVisibility(View.VISIBLE);
-            Resultado.setText("La cotizacion final es: " + ingre.Resultado(TipoPrecio[0], EnfermedadPrecio[0]));
-        }
-        if(Tipo.equals("Domestico") && Enfermedad.equals ("Rabia") ) {
-            Resultado.setVisibility(View.VISIBLE);
-            Resultado.setText("La cotizacion final es: " + ingre.Resultado(TipoPrecio[0], EnfermedadPrecio[0]));
-        }
-        if(Tipo.equals("Domestico") && Enfermedad.equals ("Brucelosis") ) {
-            Resultado.setVisibility(View.VISIBLE);
-            Resultado.setText("La cotizacion final es: " + ingre.Resultado(TipoPrecio[0], EnfermedadPrecio[0]));
-        }
+        Resultado.setText("La cotizacion final es: " + ingre.Resultado(TipoPrecio[T], EnfermedadPrecio[E]));
+    }
+
+    public void Volver(View view) {
+        Intent i = new Intent(getBaseContext(), Home_act.class);
+        startActivity(i);
     }
 }

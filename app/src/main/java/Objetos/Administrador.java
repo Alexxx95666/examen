@@ -3,11 +3,14 @@ package Objetos;
 import java.util.Objects;
 
 public class Administrador {
+
     private int id;
+
     private String user;
     private String pass;
 
-    public Administrador(){
+    public Administrador()
+    {
         user = "Sofia";
         pass = "123";
     }

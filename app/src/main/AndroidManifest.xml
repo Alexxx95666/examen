@@ -13,6 +13,9 @@
             android:name=".Ingresos_Act"
             android:exported="false" />
         <activity
+            android:name=".Home_act"
+            android:exported="false" />
+        <activity
             android:name=".Gestion_Animales_act"
             android:exported="false" />
         <activity
